@@ -1,19 +1,13 @@
 """
 gbm_simulator.py
-================
 Estimate the drift (μ) and volatility (σ) of a geometric Brownian motion from
 historical equity prices, then simulate forward paths.
 
-Why it matters
---------------
+
 • Parameter estimation is done with **maximum-likelihood** on log-returns, a staple
   technique in risk analytics and time-series modelling.  
 • Simulation relies on the *exact* GBM solution, giving users a fast Monte-Carlo
   engine that scales to thousands of paths in a single call.
-
-Run it from the command line
-----------------------------
-$ python gbm_simulator.py AAPL --years 2 --paths 5000
 
 Outputs μ, σ, and an interactive Matplotlib plot of 50 sample paths.
 """
@@ -44,14 +38,12 @@ def estimate_gbm_params(
     Maximum-likelihood estimates of μ and σ for GBM.
 
     Parameters
-    ----------
     prices : pd.Series
         Chronologically ordered adjusted close prices.
     dt_years : float, optional
         Length of one time step in *years* (default ≈ one trading day).
 
     Returns
-    -------
     mu_hat, sigma_hat
         Annualised drift and volatility.
     """
@@ -77,7 +69,6 @@ def simulate_gbm_paths(
     Vectorised Monte-Carlo simulation of GBM using the analytical solution.
 
     Returns
-    -------
     paths : ndarray
         Shape ``(n_steps + 1, n_paths)``;  first row is the initial price.
     """
