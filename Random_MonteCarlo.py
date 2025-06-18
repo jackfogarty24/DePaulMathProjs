@@ -1,6 +1,4 @@
 """
-monte_carlo_random.py
-=====================
 Showcases a *home-grown* linear-congruential generator (LCG) and two classic
 Monte-Carlo problems:
 
