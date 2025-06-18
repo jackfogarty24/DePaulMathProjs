@@ -11,7 +11,6 @@ terminates when both the step size and the residual norm fall below a
 user-supplied tolerance.
 
 Usage
------
 Run the file directly to see the demo:
 
     python broyden_solver.py
@@ -19,7 +18,6 @@ Run the file directly to see the demo:
 or import the ``broyden`` function from another script.
 
 Reference
----------
 C. G. Broyden, “A class of methods for solving nonlinear simultaneous equations,”
 Math. Comput. 19 (1965) 577–593.
 """
@@ -39,7 +37,6 @@ def broyden(
     Solve the system F(x) = 0 with Broyden’s rank-one update.
 
     Parameters
-    ----------
     f
         Function mapping ℝⁿ → ℝⁿ whose root is sought.
     x0
@@ -52,7 +49,6 @@ def broyden(
         If True, print residual and step norms every iteration.
 
     Returns
-    -------
     x
         Approximate root.
     info
