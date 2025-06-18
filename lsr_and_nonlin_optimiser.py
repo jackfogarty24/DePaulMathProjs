@@ -1,9 +1,6 @@
 """
-curve_fit_toolkit.py
 Practical least-squares and curve-fit helpers that operate directly on a
-*Pandas* ``DataFrame`` with two required columns: ``"x"`` and ``"y"``.
-
-The module demonstrates:
+*Pandas* DataFrame with two required columns "x" and "y".
 
     1. Ordinary-least-squares polynomial regression (analytical normal equations)
     2. Non-linear curve-fitting with SciPy’s Levenberg–Marquardt optimiser
