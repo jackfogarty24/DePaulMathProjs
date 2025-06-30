@@ -17,9 +17,6 @@ Run the file directly to see the demo:
 
 or import the ``broyden`` function from another script.
 
-Reference
-C. G. Broyden, “A class of methods for solving nonlinear simultaneous equations,”
-Math. Comput. 19 (1965) 577–593.
 """
 from __future__ import annotations
 from typing import Callable, Tuple, Dict
